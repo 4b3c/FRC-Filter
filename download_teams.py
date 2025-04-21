@@ -28,12 +28,12 @@ while True:
     # Check if the request was successful
     if response.status_code == 200 and response.json() != []:
         print(f"Successfully retrieved data for page {page}: {response.status_code}")
-        full_data.append(response.json())
+        full_data += response.json()
     else:
         print(f"Failed to retrieve data for page {page}: {response.status_code}")
         break
     time.sleep(0.5)
     page += 1
 
-with open("data.json", "w") as f:
+with open("teams.json", "w") as f:
     json.dump(full_data, f, indent=4) 
