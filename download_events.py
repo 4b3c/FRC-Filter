@@ -18,7 +18,7 @@ headers = {
 
 
 # Endpoint to get the list of teams
-endpoint = f"/team/frc2486/events"
+endpoint = f"/events/2025"
 
 # Make a GET request to the API
 response = requests.get(BASE_URL + endpoint, headers=headers)
